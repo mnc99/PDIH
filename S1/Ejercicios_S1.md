@@ -30,3 +30,10 @@ el directorio Preferences no es visible (para mostrar los archivos ocultos en un
 ![Modificación del archivo de configuración](https://github.com/mnc99/PDIH/blob/main/S1/Configuración%20DOSBOX.png?raw=true)
 ---
 ### Ejercicio 3.
+
+Por último se va a mostrar un ejemplo de un programa en ensamblador que muestra por pantalla la cadena de texto
+"Hola Mundo". Para compilar el programa de nombre hola.asm se usa el script C.BAT proporcionado indicando el nombre
+del programa. Una vez compilado, se ejecuta indicando el nombre del programa y pulsando Intro:
+
+
+
