@@ -38,3 +38,8 @@ del programa. Una vez compilado, se ejecuta indicando el nombre del programa y p
 ![Programa hola.asm](https://github.com/mnc99/PDIH/blob/main/S1/Hola%20Mundo%20ASM.png?raw=true)
 ![Compilación y ejecución hola.asm](https://github.com/mnc99/PDIH/blob/main/S1/Compilar%20y%20Ejecutar%20HolaMundo.png?raw=true)
 
+Se va a realizar una modificación del programa anterior para que muestre el mensaje por pantalla siete veces. Se compila y ejecuta
+del mismo modo que se ha descrito anteriormente, con la salvedad de que ahora el nombre del programa es holaLoop.asm
+
+
+
