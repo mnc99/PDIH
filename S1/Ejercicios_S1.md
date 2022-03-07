@@ -13,7 +13,7 @@ archivos necesarios para el videojuego basta con ejecutarlo escribiendo DOOM e i
 
 ![Orden para ejecutar DOOM](https://github.com/mnc99/PDIH/blob/main/S1/Comando%20para%20iniciar%20DOOM.png?raw=true)
 ![Jugando a DOOM](https://github.com/mnc99/PDIH/blob/main/S1/Jugando%20a%20DOOM.png?raw=true)
-
+---
 ### Ejercicio 2.
 
 A continuación se va a configurar DOSBox para que monte en la unidad C: el directorio donde de encuentra el entorno de
@@ -28,3 +28,5 @@ En macOS para poder acceder a esta ruta es necesario mostrar los archivos oculto
 el directorio Preferences no es visible (para mostrar los archivos ocultos en un directorio en macOS pulsar Command+Shift+.).
 
 ![Modificación del archivo de configuración](https://github.com/mnc99/PDIH/blob/main/S1/Configuración%20DOSBOX.png?raw=true)
+---
+### Ejercicio 3.
