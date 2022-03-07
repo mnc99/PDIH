@@ -8,3 +8,8 @@ DOSBox simplemente hay que ejecutar la aplicación:
 
 ![DOSBox en ejecución](https://github.com/mnc99/PDIH/blob/main/S1/Ejecución-DOSBox.png?raw=true)
 
+Como muestra del funcionamiento de DOSBox, se muestra la ejecución del videojuego DOOM. Una vez que se han descargado los
+archivos necesarios para el videojuego basta con ejecutarlo escribiendo DOOM e intro en DOSBox.
+
+![Orden para ejecutar DOOM](https://github.com/mnc99/PDIH/blob/main/S1/Comando%20para%20iniciar%20DOOM.png?raw=true)
+![Jugando a DOOM](https://github.com/mnc99/PDIH/blob/main/S1/Jugando%20a%20DOOM.png?raw=true)
