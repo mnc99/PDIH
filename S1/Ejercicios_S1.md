@@ -35,5 +35,6 @@ Por último se va a mostrar un ejemplo de un programa en ensamblador que muestra
 "Hola Mundo". Para compilar el programa de nombre hola.asm se usa el script C.BAT proporcionado indicando el nombre
 del programa. Una vez compilado, se ejecuta indicando el nombre del programa y pulsando Intro:
 
-
+![Programa hola.asm](https://github.com/mnc99/PDIH/blob/main/S1/Hola%20Mundo%20ASM.png?raw=true)
+![Compilación y ejecución hola.asm](https://github.com/mnc99/PDIH/blob/main/S1/Compilar%20y%20Ejecutar%20HolaMundo.png?raw=true)
 
