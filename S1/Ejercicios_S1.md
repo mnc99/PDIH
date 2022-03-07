@@ -20,7 +20,11 @@ A continuación se va a configurar DOSBox para que monte en la unidad C: el dire
 programación Borland C e indicar en que path se encuentran las utilidades de compilación. En mi caso, todos estos archivos
 se encuentran en el directorio DOSBOX que he creado para tal efecto con la siguiente ruta en mi equipo: /Users/mnc99/DOSBOX.
 
+![Directorio DOSBOX](https://github.com/mnc99/PDIH/blob/main/S1/Directorio%20DOSBOX.png?raw=true)
+
 Para configurar DOSBox de modo que la unidad C: se monte en la ruta anterior y que inicie desde C: hay que modificar el archivo
 de configuración de DOSBox que se encuentra en la siguiente ruta: /Users/mnc99/Library/Preferences/DOSBox 0.74-3-3 Preferences.
 En macOS para poder acceder a esta ruta es necesario mostrar los archivos ocultos dentro del directorio de usuario, de otro modo
 el directorio Preferences no es visible (para mostrar los archivos ocultos en un directorio en macOS pulsar Command+Shift+.).
+
+![Modificación del archivo de configuración](https://github.com/mnc99/PDIH/blob/main/S1/Configuración%20DOSBOX.png?raw=true)
