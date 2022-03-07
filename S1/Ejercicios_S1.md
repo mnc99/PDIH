@@ -41,5 +41,6 @@ del programa. Una vez compilado, se ejecuta indicando el nombre del programa y p
 Se va a realizar una modificación del programa anterior para que muestre el mensaje por pantalla siete veces. Se compila y ejecuta
 del mismo modo que se ha descrito anteriormente, con la salvedad de que ahora el nombre del programa es holaLoop.asm
 
-
+![Programa holaLoop.asm](https://github.com/mnc99/PDIH/blob/main/S1/HolaLoop%20ASM.png?raw=true)
+![Compilación y ejecución holaLoop.asm](https://github.com/mnc99/PDIH/blob/main/S1/Compilación%20y%20ejecución%20holaLoop.png?raw=true)
 
