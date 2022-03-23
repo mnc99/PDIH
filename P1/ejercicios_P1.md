@@ -59,3 +59,12 @@ de la pantalla antes de llamar a la función y después.
 ![Ejecución clrscr antes](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20clrscr%20(antes).png?raw=true)
 ![Ejecución clrscr](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20clrscr.png?raw=true)
 ---
+
+### Función cputchar(char c, int repeticiones)
+
+Esta función muestra un carácter dado como parámetro el número de repeticiones indicado. Para mostrar su funcionamiento
+se escribe un carácter desde teclado y se muestra con el color y las repeticiones indicandas.
+
+![Código cputchar]()
+![Ejecución cputchar]()
+---
