@@ -39,3 +39,13 @@ con el último establecido durante la ejecución: Modo Texto (80x25 con 16 color
 ![Código getvideomode](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/getvideomode.png?raw=true)
 ![Ejecución getvideomode](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20getvideomode.png?raw=true)
 ---
+
+### Funciones textcolor(BYTE colorPrinc) y textbackground(BYTE colorFondo)
+
+Mediante la llamada a textcolor y a textbackground se establece el color principal y de fondo del texto respectivamente.
+No involucran ninguna interrupción. En el ejemplo se ha establecido como color de texto el verde (código 2) y como color
+de fondo el rojo (código 4).
+
+![Código textcolor y textbackground]()
+![Ejecución textcolor y textbackground]()
+---
