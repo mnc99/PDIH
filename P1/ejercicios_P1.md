@@ -14,6 +14,6 @@ valores de X e Y.
 Gracias a esta función se puede modificar el tamaño del cursor (invisible, normal, grueso) indicando como
 parámetro el tipo deseado
 
-![Código setcursortype]()
-![Ejecución setcursortype]()
+![Código setcursortype](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/setcursortype.png?raw=true)
+![Ejecución setcursortype](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20setcursortype.png?raw=true)
 ---
