@@ -97,7 +97,7 @@ implementar esta función es necesario implementar también una función que per
 posición concreta en pantalla. Con ese objetivo se ha desarrollado la función cpixel(int x, int y, BYTE c) que recibe como
 parámetros las coordenadas del píxel en pantalla y el color del mismo.
 
-![Código cpixel]()
-![Código draw]()
-![Ejecución draw]()
+![Código cpixel](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/cpixel.png?raw=true)
+![Código draw](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/draw.png?raw=true)
+![Ejecución draw](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20draw.png?raw=true)
 ---
