@@ -76,3 +76,16 @@ La función getche obtiene un carácter de teclado y lo muestra por pantalla.
 ![Código getche](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/getche.png?raw=true)
 ![Ejecución getche](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20getche.png?raw=true)
 ---
+
+## Ejercicios opcionales: Funciones square y draw
+
+### Función square(int xSupIzq, int ySupIzq, int xinfDcha, int yInfDcha, BYTE ctexto, BYTE cFondo)
+
+Con la llamada de la función square se dibuja un recuadro en la pantalla en modo texto. Se reciben como parámetros
+las coordenadas en pantalla de la esquina superior izquierda y derecha del recuadro y los colores principal y secundario
+del carácter que se va a usar para dibujar el recuadro (en el ejemplo '*'). El color principal usado es el negro y el
+color de fondo el verde.
+
+![Código square]()
+![Ejecución square]()
+---
