@@ -21,7 +21,8 @@ parámetro el tipo de cursor deseado.
 ### Función setvideomode(int modoVideo)
 
 A través de esta función se puede establecer el modo de vídeo que se desee indicando el número asociado
-al modo correspondiente como parámetro.
+al modo correspondiente como parámetro. En los ejemplos de ejecución se ha variado entre los modos de
+vídeo: Modo Gráfico (320x200), Modo Texto (40x25), Modo Texto (80x25 con 2 colores) y Modo Texto (80x25 con 16 colores).
 
 ![Código setvideomode]()
 ![Ejecución setvideomode]()
