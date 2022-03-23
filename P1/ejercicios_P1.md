@@ -86,6 +86,6 @@ las coordenadas en pantalla de la esquina superior izquierda y derecha del recua
 del carácter que se va a usar para dibujar el recuadro (en el ejemplo '*'). El color principal usado es el negro y el
 color de fondo el verde.
 
-![Código square]()
-![Ejecución square]()
+![Código square](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/square.png?raw=true)
+![Ejecución square](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20square.png?raw=true)
 ---
