@@ -30,3 +30,12 @@ vídeo: Modo Gráfico (320x200), Modo Texto (40x25), Modo Texto (80x25 con 2 col
 ![Ejecución setvideomode 3](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20setvideomode%203.png?raw=true)
 ![Ejecución setvideomode 4](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20setvideomode%204.png?raw=true)
 ---
+
+### Función getvideomode()
+
+Función muy sencilla que únicamente indica el modo de vídeo establecido actualmente. En este caso, el modo de vídeo coincide
+con el último establecido durante la ejecución: Modo Texto (80x25 con 16 colores).
+
+![Código getvideomode]()
+![Ejecución getvideomode]()
+---
