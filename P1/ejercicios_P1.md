@@ -12,8 +12,17 @@ valores de X e Y.
 ### Función setcursortype(int tipoCursor)
 
 Gracias a esta función se puede modificar el tamaño del cursor (invisible, normal, grueso) indicando como
-parámetro el tipo deseado
+parámetro el tipo de cursor deseado.
 
 ![Código setcursortype](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/setcursortype.png?raw=true)
 ![Ejecución setcursortype](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20setcursortype.png?raw=true)
+---
+
+### Función setvideomode(int modoVideo)
+
+A través de esta función se puede establecer el modo de vídeo que se desee indicando el número asociado
+al modo correspondiente como parámetro.
+
+![Código setvideomode]()
+![Ejecución setvideomode]()
 ---
