@@ -52,9 +52,10 @@ de fondo el rojo (código 4).
 
 ### Función clrscr()
 
-La función clrscr se encarga de borrar todo lo que se esté mostrando en la pantalla en ese momento.
+La función clrscr se encarga de borrar todo lo que se esté mostrando en la pantalla en ese momento. Se muestra una imagen
+de la pantalla antes de llamar a la función y después.
 
 ![Código clrscr](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/clrscr.png?raw=true)
-![Ejecución clrscr antes]()
-![Ejecución clrscr]()
+![Ejecución clrscr antes](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20clrscr%20(antes).png?raw=true)
+![Ejecución clrscr](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20clrscr.png?raw=true)
 ---
