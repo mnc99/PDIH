@@ -49,3 +49,12 @@ de fondo el rojo (código 4).
 ![Código textcolor y textbackground](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/textcolor%20y%20textbackground.png?raw=true)
 ![Ejecución textcolor y textbackground](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20textcolor%20y%20textbackground.png?raw=true)
 ---
+
+### Función clrscr()
+
+La función clrscr se encarga de borrar todo lo que se esté mostrando en la pantalla en ese momento.
+
+![Código clrscr]()
+![Ejecución clrscr antes]()
+![Ejecución clrscr]()
+---
