@@ -89,3 +89,15 @@ color de fondo el verde.
 ![Código square](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/square.png?raw=true)
 ![Ejecución square](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20square.png?raw=true)
 ---
+
+### Función draw()
+
+La función draw se encarga de dibujar en modo gráfico (en concreto el Modo Gráfico (320x200 con 4 colores)). Para poder
+implementar esta función es necesario implementar también una función que permita establecer el color de un píxel en una
+posición concreta en pantalla. Con ese objetivo se ha desarrollado la función cpixel(int x, int y, BYTE c) que recibe como
+parámetros las coordenadas del píxel en pantalla y el color del mismo.
+
+![Código cpixel]()
+![Código draw]()
+![Ejecución draw]()
+---
