@@ -46,6 +46,6 @@ Mediante la llamada a textcolor y a textbackground se establece el color princip
 No involucran ninguna interrupción. En el ejemplo se ha establecido como color de texto el verde (código 2) y como color
 de fondo el rojo (código 4).
 
-![Código textcolor y textbackground]()
-![Ejecución textcolor y textbackground]()
+![Código textcolor y textbackground](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/textcolor%20y%20textbackground.png?raw=true)
+![Ejecución textcolor y textbackground](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20textcolor%20y%20textbackground.png?raw=true)
 ---
