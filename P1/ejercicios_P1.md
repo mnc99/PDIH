@@ -73,6 +73,6 @@ se escribe un carácter desde teclado y se muestra con el color y las repeticion
 
 La función getche obtiene un carácter de teclado y lo muestra por pantalla.
 
-![Código getche]()
-![Ejecución getche]()
+![Código getche](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/getche.png?raw=true)
+![Ejecución getche](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20getche.png?raw=true)
 ---
