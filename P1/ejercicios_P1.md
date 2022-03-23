@@ -63,8 +63,16 @@ de la pantalla antes de llamar a la función y después.
 ### Función cputchar(char c, int repeticiones)
 
 Esta función muestra un carácter dado como parámetro el número de repeticiones indicado. Para mostrar su funcionamiento
-se escribe un carácter desde teclado y se muestra con el color y las repeticiones indicandas.
+se escribe un carácter desde teclado y se muestra con el color y las repeticiones indicadas.
 
 ![Código cputchar](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/cputchar.png?raw=true)
 ![Ejecución cputchar](https://github.com/mnc99/PDIH/blob/main/P1/Screenshots/Ejecución%20cputchar.png?raw=true)
+---
+
+### Función getche()
+
+La función getche obtiene un carácter de teclado y lo muestra por pantalla.
+
+![Código getche]()
+![Ejecución getche]()
 ---
