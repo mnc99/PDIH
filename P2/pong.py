@@ -11,39 +11,48 @@ def create_window(nrows, ncols, posY, posX, title):
 
     return win
 
-def move_ball(win):
+def move_ball():
     maxX = curses.LINES
-    #maxY = curses.COLS
+    maxY = curses.COLS
     x = 1
     y = 1
     nextX = 0
-    direction = 1
+    nextY = 0
+    directionx = 1
+    directiony = 1
+    subWin = curses.newwin(25,80,1,1)
 
     curses.noecho()
     curses.curs_set(False)
 
-    while True:
-        win.clear()
-        win.addch(y,x,'o')
-        win.refresh()
+    while (1):
+        subWin.clear()
+        subWin.addch(y,x,'o')
+        subWin.refresh()
 
         time.sleep(0.05)
 
-        nextX = x + direction
+        nextX = x + directionx
+        nextY = y + directiony
 
-        if (nextX >= maxX or nextX == 0):
-            direction *= -1
+        if (nextX >= maxX or nextX < 0):
+            directionx *= -1
         else:
-            x += direction
+            x += directionx
+
+        if (nextY >= maxY or nextY < 0):
+            directiony *= -1
+        else:
+            y += directiony
 
 
 
 
 def main(stdscr):
     
-    win = create_window(curses.LINES,curses.COLS,10,10,'Pong')
-    move_ball(win)
-    #win.getch()
+    win = create_window(25,80,10,10,'Pong')
+    #move_ball()
+    win.getch()
 
 # Python permite inicializar automaticamente los recursos de ncurses
 # gracias a la funcion wrapper.
