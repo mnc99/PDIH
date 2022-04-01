@@ -102,13 +102,13 @@ def move_ball(stdscr):
 
         #Controls for left bar
         if (k == ord('a')):
-            posYBar1 -= 1 if (upperYBar1-1) > 0 else posYBar1
+            posYBar1 -= 1 if (posYBar1-1) > 0 else posYBar1
         elif (k == ord('z')):
             posYBar1 += 1 if (posYBar1+1) < maxY else posYBar1
 
         #Controls for right bar
         if (k == ord('k')):
-            posYBar2 -= 1 if (upperYBar2-1) > 0 else posYBar2
+            posYBar2 -= 1 if (posYBar2-1) > 0 else posYBar2
         elif (k == ord('m')):
             posYBar2 += 1 if (posYBar2+1) < maxY else posYBar2
 
