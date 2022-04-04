@@ -1,6 +1,7 @@
 # Pong game written in python using curses library
 import curses
 import time
+from random import randint
 
 def create_window(rows, cols, posY, posX, title):
     win = curses.newwin(rows,cols,posY,posX)
@@ -31,6 +32,16 @@ def welcome_window():
     welcome.addstr((rows // 4)+4, cols-len("Up --> Press 'k'")-5, "Down --> Press 'm'")
     welcome.getch()
 
+def game_over_window(player):
+    rows = 20
+    cols = 30
+    curses.curs_set(0)
+    game_over = create_centered_window(rows, cols, "Game Over!")
+    xmsg = int((cols // 2) - (len(player) // 2) - len(player) % 2)
+    ymsg = int((rows // 2) - 2)
+    game_over.addstr(ymsg, xmsg, player + " wins!")
+    game_over.getch()
+
 def move_ball(stdscr):
     maxY, maxX = stdscr.getmaxyx()
     ballPosition = [maxX // 2, maxY // 2]
@@ -43,12 +54,14 @@ def move_ball(stdscr):
     k = 0
     halfX = maxX // 2
     pointsPl1 = pointsPl2 = 0
+    delay = 0.04
+    gameOver = False
 
     curses.noecho()
     curses.curs_set(0)
     stdscr.nodelay(1)
 
-    while (k != ord('q')):
+    while (k != ord('q') and gameOver == False):
         stdscr.clear()
 
         # Dividir la pantalla por la mitad
@@ -88,7 +101,7 @@ def move_ball(stdscr):
         stdscr.addstr(maxY-1, 1, "Press 'q' to exit")
         stdscr.refresh()
 
-        time.sleep(0.05)
+        time.sleep(delay)
 
         nextX = ballPosition[0] + directionx
         nextY = ballPosition[1] + directiony
@@ -126,19 +139,23 @@ def move_ball(stdscr):
         if (ballPosition[0] == 0):
             pointsPl2 += 1
             ballPosition[0] = maxX // 2
-            ballPosition[1] = maxY // 2
+            ballPosition[1] = randint(2, maxY-1)
+            directionx = 1
+            delay = 0.04
 
         if (ballPosition[0] == maxX-1):
             pointsPl1 += 1
             ballPosition[0] = maxX // 2
-            ballPosition[1] = maxY // 2
+            ballPosition[1] = randint(2, maxY-1)
+            directionx = -1
+            delay = 0.04
 
         if (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+2):
-            directionx *= -1
-            directiony *= -1
+            directionx *= 1
+            directiony *= 1
         elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+1):
-            directionx *= -1
-            directiony *= -1
+            directionx *= 1
+            directiony *= 1
         elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]):
             directionx *= -1
             directiony *= -1
@@ -151,10 +168,10 @@ def move_ball(stdscr):
 
         if (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]+2):
             directionx *= -1
-            directiony *= -1
+            directiony *= 1
         elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]+1):
             directionx *= -1
-            directiony *= -1
+            directiony *= 1
         elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]):
             directionx *= -1
             directiony *= -1
@@ -164,6 +181,16 @@ def move_ball(stdscr):
         elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]-2):
             directionx *= -1
             directiony *= -1
+
+        # Game over
+        if (pointsPl1 == 10):
+            game_over_window("Player 1")
+            gameOver = True
+        elif (pointsPl2 == 10):
+            game_over_window("Player 2")
+            gameOver = True
+
+
 
 
 def main(stdscr):
