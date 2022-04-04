@@ -149,19 +149,19 @@ def move_ball(stdscr):
             directionx *= -1
             directiony *= -1
 
-        if (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]+2):
+        if (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]+2):
             directionx *= -1
             directiony *= -1
-        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]+1):
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]+1):
             directionx *= -1
             directiony *= -1
-        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]):
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]):
             directionx *= -1
             directiony *= -1
-        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]-1):
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]-1):
             directionx *= -1
             directiony *= -1
-        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]-2):
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]-2):
             directionx *= -1
             directiony *= -1
 
