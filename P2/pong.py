@@ -33,15 +33,13 @@ def welcome_window():
 
 def move_ball(stdscr):
     maxY, maxX = stdscr.getmaxyx()
-    posXBar1 = xBall = 1
-    yBall = 1
+    ballPosition = [maxX // 2, maxY // 2]
     nextX = 0
     nextY = 0
     directionx = 1
     directiony = 1
-    posYBar1 = posYBar2 = maxY // 2
-    upperYBar1 = 0
-    upperYBar2 = 0
+    bar1Pos = [2, maxY // 2]
+    bar2Pos = [maxX-3, maxY // 2]
     k = 0
     halfX = maxX // 2
     pointsPl1 = pointsPl2 = 0
@@ -63,19 +61,28 @@ def move_ball(stdscr):
         for i in range(maxX):
             stdscr.addstr(maxY-2,i,'-')
 
-        stdscr.addch(yBall,xBall,'o')
-        stdscr.addstr(posYBar1-2, 0, '|')
-        stdscr.addstr(posYBar1-1, 0, '|')
-        stdscr.addstr(posYBar1, 0, '|')
-        stdscr.addstr(posYBar1+1, 0, '|')
-        stdscr.addstr(posYBar1+2, 0, '|')
-        stdscr.addstr(posYBar2-2, maxX-1, '|')
-        stdscr.addstr(posYBar2-1, maxX-1, '|')
-        stdscr.addstr(posYBar2, maxX-1, '|')
-        stdscr.addstr(posYBar2+1, maxX-1, '|')
-        stdscr.addstr(posYBar2+2, maxX-1, '|')
+        # Ball
+        stdscr.addch(ballPosition[1],ballPosition[0],'o')
+
+        # Left bar
+        stdscr.addstr(bar1Pos[1]-2, 2, '|')
+        stdscr.addstr(bar1Pos[1]-1, 2, '|')
+        stdscr.addstr(bar1Pos[1], 2, '|')
+        stdscr.addstr(bar1Pos[1]+1, 2, '|')
+        stdscr.addstr(bar1Pos[1]+2, 2, '|')
+
+        # Rigth bar
+        stdscr.addstr(bar2Pos[1]-2, maxX-3, '|')
+        stdscr.addstr(bar2Pos[1]-1, maxX-3, '|')
+        stdscr.addstr(bar2Pos[1], maxX-3, '|')
+        stdscr.addstr(bar2Pos[1]+1, maxX-3, '|')
+        stdscr.addstr(bar2Pos[1]+2, maxX-3, '|')
+
+        # Points
         stdscr.addstr(1, halfX-3, str(pointsPl1))
         stdscr.addstr(1, halfX+3, str(pointsPl2))
+
+        # Info
         stdscr.addstr(1, 1, "Player 1")
         stdscr.addstr(1, maxX-len("Player 2")-1, "Player 2")
         stdscr.addstr(maxY-1, 1, "Press 'q' to exit")
@@ -83,34 +90,80 @@ def move_ball(stdscr):
 
         time.sleep(0.05)
 
-        nextX = xBall + directionx
-        nextY = yBall + directiony
-        upperYBar1 = posYBar1-2
-        upperYBar2 = posYBar2-2
+        nextX = ballPosition[0] + directionx
+        nextY = ballPosition[1] + directiony
 
         if (nextX >= maxX or nextX < 0):
             directionx *= -1
         else:
-            xBall += directionx
+            ballPosition[0] += directionx
 
         if (nextY >= maxY-1 or nextY < 2):
             directiony *= -1
         else:
-            yBall += directiony
+            ballPosition[1] += directiony
 
         k = stdscr.getch()
 
         #Controls for left bar
         if (k == ord('a')):
-            posYBar1 -= 1 if (posYBar1-1) > 0 else posYBar1
+            bar1Pos[1] -= 2
         elif (k == ord('z')):
-            posYBar1 += 1 if (posYBar1+1) < maxY else posYBar1
+            bar1Pos[1] += 2
 
         #Controls for right bar
         if (k == ord('k')):
-            posYBar2 -= 1 if (posYBar2-1) > 0 else posYBar2
+            bar2Pos[1] -= 2
         elif (k == ord('m')):
-            posYBar2 += 1 if (posYBar2+1) < maxY else posYBar2
+            bar2Pos[1] += 2
+
+        # Check new positions of bars
+        bar1Pos[1] = max(5, bar1Pos[1])
+        bar1Pos[1] = min(maxY-5, bar1Pos[1])
+        bar2Pos[1] = max(5, bar2Pos[1])
+        bar2Pos[1] = min(maxY-5, bar2Pos[1])
+
+        if (ballPosition[0] == 0):
+            pointsPl2 += 1
+            ballPosition[0] = maxX // 2
+            ballPosition[1] = maxY // 2
+
+        if (ballPosition[0] == maxX-1):
+            pointsPl1 += 1
+            ballPosition[0] = maxX // 2
+            ballPosition[1] = maxY // 2
+
+        if (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+2):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+1):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]-1):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]-2):
+            directionx *= -1
+            directiony *= -1
+
+        if (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]+2):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]+1):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]-1):
+            directionx *= -1
+            directiony *= -1
+        elif (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2if (ballPosition[0] == bar2Pos[1]-2):
+            directionx *= -1
+            directiony *= -1
 
 
 def main(stdscr):
