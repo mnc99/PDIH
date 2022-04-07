@@ -5,7 +5,7 @@ from random import randint
 
 def create_window(rows, cols, posY, posX, title):
     win = curses.newwin(rows,cols,posY,posX)
-    win.box('|','-')
+    win.box()
     win.move(0,1)
     win.addstr(title)
     win.move(1,1)
@@ -18,16 +18,25 @@ def create_centered_window(rows, cols, title):
 
     return create_window(rows, cols, y, x, title)
 
+def get_player_name(win,msg):
+    curses.echo()
+    win.addstr(msg)
+    win.move(3,1)
+    name = win.getstr()
 
-def welcome_window():
+    return name
+
+    
+
+def welcome_window(playersNames):
     rows = 25
     cols = 80
     curses.curs_set(0)
     welcome = create_centered_window(rows, cols, "Welcome to Pong!")
-    welcome.addstr(rows // 4, 2, "Player 1 controls:")
+    welcome.addstr(rows // 4, 2, playersNames[0] + " controls:")
     welcome.addstr((rows // 4)+2, 2, "Up --> Press 'a'")
     welcome.addstr((rows // 4)+4, 2, "Down --> Press 'z'")
-    welcome.addstr(rows // 4, cols-len("Player 2 controls:")-3, "Player 2 controls:")
+    welcome.addstr(rows // 4, cols-len(playersNames[1] + " controls:")-3, playersNames[1] + " controls:")
     welcome.addstr((rows // 4)+2, cols-len("Up --> Press 'k'")-5, "Up --> Press 'k'")
     welcome.addstr((rows // 4)+4, cols-len("Up --> Press 'k'")-5, "Down --> Press 'm'")
     welcome.getch()
@@ -42,7 +51,7 @@ def game_over_window(player):
     game_over.addstr(ymsg, xmsg, player + " wins!")
     game_over.getch()
 
-def move_ball(stdscr):
+def move_ball(stdscr, playersNames):
     maxY, maxX = stdscr.getmaxyx()
     ballPosition = [maxX // 2, maxY // 2]
     nextX = 0
@@ -96,8 +105,8 @@ def move_ball(stdscr):
         stdscr.addstr(1, halfX+3, str(pointsPl2))
 
         # Info
-        stdscr.addstr(1, 1, "Player 1")
-        stdscr.addstr(1, maxX-len("Player 2")-1, "Player 2")
+        stdscr.addstr(1, 1, playersNames[0])
+        stdscr.addstr(1, maxX-len(playersNames[1])-1, playersNames[1])
         stdscr.addstr(maxY-1, 1, "Press 'q' to exit")
         stdscr.refresh()
 
@@ -184,18 +193,32 @@ def move_ball(stdscr):
 
         # Game over
         if (pointsPl1 == 10):
-            game_over_window("Player 1")
+            game_over_window(playersNames[0])
             gameOver = True
         elif (pointsPl2 == 10):
-            game_over_window("Player 2")
+            game_over_window(playersNames[1])
             gameOver = True
 
 
 
 
 def main(stdscr):
-    welcome_window()
-    move_ball(stdscr)
+    # Get names of the two players
+    win = create_centered_window(5, 40, "Welcome to Pong!")
+    player1 = get_player_name(win, "Enter player 1 name:")
+    win.erase()
+
+    win = create_centered_window(5, 40, "Welcome to Pong!")
+    player2 = get_player_name(win, "Enter player 2 name:")
+    win.erase()
+
+    playersNames = (player1, player2)
+
+    # Launch welcome window
+    welcome_window(playersNames)
+
+    # Start game
+    move_ball(stdscr, playersNames)
 
 # Python permite inicializar y liberar automaticamente los recursos de curses
 # gracias a la funcion wrapper.
