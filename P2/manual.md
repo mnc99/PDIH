@@ -13,3 +13,5 @@ El funcionamiento del videojuego es muy simple. Al iniciar el juego lo primero q
 ventana en la que se indica que se introduzca el nombre del primer jugador, una vez introducido y pulsada
 la tecla "Enter" el juego solicitará el nombre del segundo jugador.
 
+![Nombre Jugador 1](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/player1-name.png?raw=true)
+![Nombre Jugador 2](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/player2-name.png?raw=true)
