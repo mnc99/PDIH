@@ -15,3 +15,14 @@ la tecla "Enter" el juego solicitará el nombre del segundo jugador.
 
 ![Nombre Jugador 1](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/player1-name.png?raw=true)
 ![Nombre Jugador 2](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/player2-name.png?raw=true)
+
+Una vez que se han introducido los nombres de los dos jugadores, se muestra una nueva ventana que indica
+los controles del juego:
+
+- Controles jugador 1:
+    - Mover barra hacia arriba: Pulsar tecla 'a'.
+    - Mover barra hacia abajo: Pulsar tecla 'z'.
+
+- Controles jugador 2:
+    - Mover barra hacia arriba: Pulsar tecla 'k'.
+    - Mover barra hacia abajo: Pulsar tecla 'm'.
