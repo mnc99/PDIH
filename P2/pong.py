@@ -52,7 +52,8 @@ def move_ball(stdscr, playersNames):
     ballPosition = [maxX // 2, maxY // 2]
     nextX = 0
     nextY = 0
-    directionx = 1
+    directions = (1,-1)
+    directionx = directions[randint(0,1)]
     directiony = 1
     bar1Pos = [2, maxY // 2]
     bar2Pos = [maxX-3, maxY // 2]

@@ -31,7 +31,9 @@ los controles del juego:
 
 A continuación comienza la partida. En la zona de arriba de la pantalla se muestra información con los nombres
 de los jugadores y sus puntos, mientras que en la zona de abajo de la pantalla se informa de que se puede salir
-del juego pulsando la tecla 'q'.
+del juego pulsando la tecla 'q'. Al inicio de la partida la bola sale desde una desde el centrohacia uno de los 
+jugadores. En el momento en el que un jugador marque, la pelota vuelve a salir desde una posición aleatoria del 
+centro pero siempre en la dirección del jugador que ha marcado.
 
 ![Ejemplo de partida](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/partida.png?raw=true)
 
