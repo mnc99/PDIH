@@ -26,9 +26,8 @@ def get_player_name(win,msg):
 
     return name
 
-def welcome_window(playersNames):
-    rows = 25
-    cols = 80
+def welcome_window(stdscr,playersNames):
+    rows, cols = stdscr.getmaxyx()
     curses.curs_set(0)
     welcome = create_centered_window(rows, cols, "Welcome to Pong!")
     welcome.addstr(rows // 3, 10, playersNames[0] + " controls:")
@@ -39,9 +38,8 @@ def welcome_window(playersNames):
     welcome.addstr((rows // 3)+4, cols-len("Up --> Press 'k'")-10, "Down --> Press 'm'")
     welcome.getch()
 
-def game_over_window(player):
-    rows = 20
-    cols = 30
+def game_over_window(stdscr, player):
+    rows, cols = stdscr.getmaxyx()
     curses.curs_set(0)
     game_over = create_centered_window(rows, cols, "Game Over!")
     xmsg = int((cols // 2) - (len(player) // 2) - len(player) % 2)
@@ -190,10 +188,10 @@ def move_ball(stdscr, playersNames):
 
         # Game over
         if (pointsPl1 == 10):
-            game_over_window(playersNames[0])
+            game_over_window(stdscr, playersNames[0])
             gameOver = True
         elif (pointsPl2 == 10):
-            game_over_window(playersNames[1])
+            game_over_window(stdscr, playersNames[1])
             gameOver = True
 
 
@@ -212,7 +210,7 @@ def main(stdscr):
     playersNames = (player1, player2)
 
     # Launch welcome window
-    welcome_window(playersNames)
+    welcome_window(stdscr, playersNames)
 
     # Start game
     move_ball(stdscr, playersNames)
