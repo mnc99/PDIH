@@ -34,4 +34,8 @@ A continuación comienza la partida. En la zona de arriba de la pantalla se mues
 de los jugadores y sus puntos, mientras que en la zona de abajo de la pantalla se informa de que se puede salir
 del juego pulsando la tecla 'q'.
 
-![Ejemplo de partida]()
+![Ejemplo de partida](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/partida.png?raw=true)
+
+En el momento en el que uno de los jugadores llegue a 10 puntos gana la partida y termina el juego.
+
+![Fin de partida]()
