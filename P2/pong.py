@@ -26,19 +26,17 @@ def get_player_name(win,msg):
 
     return name
 
-    
-
 def welcome_window(playersNames):
     rows = 25
     cols = 80
     curses.curs_set(0)
     welcome = create_centered_window(rows, cols, "Welcome to Pong!")
-    welcome.addstr(rows // 4, 2, playersNames[0] + " controls:")
-    welcome.addstr((rows // 4)+2, 2, "Up --> Press 'a'")
-    welcome.addstr((rows // 4)+4, 2, "Down --> Press 'z'")
-    welcome.addstr(rows // 4, cols-len(playersNames[1] + " controls:")-3, playersNames[1] + " controls:")
-    welcome.addstr((rows // 4)+2, cols-len("Up --> Press 'k'")-5, "Up --> Press 'k'")
-    welcome.addstr((rows // 4)+4, cols-len("Up --> Press 'k'")-5, "Down --> Press 'm'")
+    welcome.addstr(rows // 3, 10, playersNames[0] + " controls:")
+    welcome.addstr((rows // 3)+2, 10, "Up --> Press 'a'")
+    welcome.addstr((rows // 3)+4, 10, "Down --> Press 'z'")
+    welcome.addstr(rows // 3, cols-len("Up --> Press 'k'")-10, playersNames[1] + " controls:")
+    welcome.addstr((rows // 3)+2, cols-len("Up --> Press 'k'")-10, "Up --> Press 'k'")
+    welcome.addstr((rows // 3)+4, cols-len("Up --> Press 'k'")-10, "Down --> Press 'm'")
     welcome.getch()
 
 def game_over_window(player):
@@ -63,7 +61,6 @@ def move_ball(stdscr, playersNames):
     k = 0
     halfX = maxX // 2
     pointsPl1 = pointsPl2 = 0
-    delay = 0.04
     gameOver = False
 
     curses.noecho()
@@ -73,7 +70,7 @@ def move_ball(stdscr, playersNames):
     while (k != ord('q') and gameOver == False):
         stdscr.clear()
 
-        # Dividir la pantalla por la mitad
+        # Divide screen in half
         for i in range(maxY):
             stdscr.addstr(i,halfX, '|')
 
@@ -110,7 +107,7 @@ def move_ball(stdscr, playersNames):
         stdscr.addstr(maxY-1, 1, "Press 'q' to exit")
         stdscr.refresh()
 
-        time.sleep(delay)
+        time.sleep(0.04)
 
         nextX = ballPosition[0] + directionx
         nextY = ballPosition[1] + directiony
@@ -150,21 +147,20 @@ def move_ball(stdscr, playersNames):
             ballPosition[0] = maxX // 2
             ballPosition[1] = randint(2, maxY-1)
             directionx = 1
-            delay = 0.04
 
         if (ballPosition[0] == maxX-1):
             pointsPl1 += 1
             ballPosition[0] = maxX // 2
             ballPosition[1] = randint(2, maxY-1)
             directionx = -1
-            delay = 0.04
 
+        # Making the ball bounce in left bar
         if (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+2):
             directionx *= 1
-            directiony *= 1
+            directiony *= -1
         elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]+1):
             directionx *= 1
-            directiony *= 1
+            directiony *= -1
         elif (ballPosition[0] == bar1Pos[0] and ballPosition[1] == bar1Pos[1]):
             directionx *= -1
             directiony *= -1
@@ -175,6 +171,7 @@ def move_ball(stdscr, playersNames):
             directionx *= -1
             directiony *= -1
 
+        # Making the ball bounce in right bar
         if (ballPosition[0] == bar2Pos[0] and ballPosition[1] == bar2Pos[1]+2):
             directionx *= -1
             directiony *= 1
