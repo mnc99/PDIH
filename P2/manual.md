@@ -29,3 +29,9 @@ los controles del juego:
     - Mover barra hacia abajo: Pulsar tecla 'm'.
 
 ![Controles jugadores](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/controles-jugadores.png?raw=true)
+
+A continuación comienza la partida. En la zona de arriba de la pantalla se muestra información con los nombres
+de los jugadores y sus puntos, mientras que en la zona de abajo de la pantalla se informa de que se puede salir
+del juego pulsando la tecla 'q'.
+
+![Ejemplo de partida]()
