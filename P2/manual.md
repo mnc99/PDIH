@@ -1,6 +1,5 @@
 # Práctica 2: Uso de bibliotecas de programación de interfaces de usuario en modo texto.
 ## Ejercicio: Programar videojuego similar a Pong! usando la biblioteca ncurses.
-
 ### Introducción
 
 Haciendo uso de la biblioteca *ncurses* para programación de interfaces de usuario en modo texto
@@ -38,4 +37,4 @@ del juego pulsando la tecla 'q'.
 
 En el momento en el que uno de los jugadores llegue a 10 puntos gana la partida y termina el juego.
 
-![Fin de partida]()
+![Fin de partida](https://github.com/mnc99/PDIH/blob/main/P2/Screenshots/game%20over.png?raw=true)
