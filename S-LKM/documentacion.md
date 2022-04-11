@@ -30,3 +30,14 @@ de extensión .ko con el nombre del módulo, en este caso, *myLKM.ko*.
 
 ![Compilación del LKM](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Compilar%20LKM.png?raw=true)
 ---
+
+### Paso 4: Insertar LKM
+
+A continuación, para que el LKM pueda ser usado, hay que cargarlo en el kernel. Gracias a las herramientas del módulo
+del kernel este proceso se puede realizar de forma muy sencilla usando la orden *insmod*:
+
+![Inserción del LKM](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Insertar%20LKM.png?raw=true)
+
+Tal y como se muestra en la imagen, al listar todos los módulos cargados en el kernel con el comando *lsmod* se puede
+ver que el LKM *myLKM* ya se ha insertado en el kernel.
+---
