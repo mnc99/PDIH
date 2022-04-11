@@ -41,3 +41,25 @@ del kernel este proceso se puede realizar de forma muy sencilla usando la orden 
 Tal y como se muestra en la imagen, al listar todos los módulos cargados en el kernel con el comando *lsmod* se puede
 ver que el LKM *myLKM* ya se ha insertado en el kernel.
 ---
+
+### Paso 5: Eliminar LKM
+
+Por último, para asegurar que el LKM funciona correctamente y que muestra un mensaje cuando se sale de él, se va a eliminar del kernel
+con el comando *rmmod*:
+
+![Eliminar LKM](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Eliminar%20LKM.png?raw=true)
+
+Si se muestra de nuevo la lista del módulos cargados, ya no aparece *myLKM*:
+
+![Lista de LKMs](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Lista%20LKM.png?raw=true)
+---
+
+### Paso 6: Comprobar /var/log/kern.log
+
+Para comprobar que el LKM ha funcionado como se esperaba, se pasa a comprobar el contenido del archivo
+*/var/log/kern.log* con los logs del kernel:
+
+![Logs del Kernel](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Logs%20Kernel.png?raw=true)
+
+Tal y como se aprecia en la imagen, el LKM ha escrito un mensaje en el momento en el que fue insertado y
+otro cuando se eliminó.
