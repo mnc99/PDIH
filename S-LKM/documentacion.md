@@ -9,3 +9,15 @@ siguientes:
 
 ![Cabeceras de Linux](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/cabeceras-linux.png?raw=true)
 ---
+
+### Paso 2: Código del LKM
+
+El LKM desarrollado es muy simple. Fundamentalmente consta de dos funciones: gandalf_init() y kenobi_exit()
+que se ejecutarán cuando el LKM se inicie y se cierre respectivamente. Ambas usan la función
+printk() para escribir en el archivo /var/log/kern.log un mensaje de texto. Para identificar cuáles son las
+funciones de inicio y de salida del módulo se hace uso de los macros module_init() y module_exit(). Adicionalmente,
+el LKM puede recibir un parámetro de entrada para mostrar en los mensajes de texto. El valor por defecto del parámetro
+es "world".
+
+El código del LKM se encuentra en el archivo *myLKM.c* situado en esta misma carpeta.
+---
