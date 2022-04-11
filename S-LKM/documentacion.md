@@ -21,3 +21,12 @@ es "world".
 
 El código del LKM se encuentra en el archivo *myLKM.c* situado en esta misma carpeta.
 ---
+
+### Paso 3: Compilar el LKM
+
+Una vez que el código del LKM está desarrollado, hay que compilarlo. Para ello, se ha empleado un archivo MakeFile
+que realiza el proceso de compilación de manera automática. Si todo sale bien, al compilar el LKM se genera un archivo
+de extensión .ko con el nombre del módulo, en este caso, *myLKM.ko*.
+
+![Compilación del LKM](https://github.com/mnc99/PDIH/blob/main/S-LKM/Screenshots/Compilar%20LKM.png?raw=true)
+---
