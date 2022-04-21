@@ -12,4 +12,9 @@ Para diseñar el circuito se han usado los siguientes elementos:
 
 El circuito obtenido es el siguiente:
 
-![Circuito con dos LEDS]()
+![Circuito con dos LEDS](https://github.com/mnc99/PDIH/blob/main/S-Arduino/Screenshots/Two%20Leds.png?raw=true)
+
+El código que implementa la lógica del circuito es el siguiente:
+
+![Código](https://github.com/mnc99/PDIH/blob/main/S-Arduino/Screenshots/Two%20Leds%20Code.png?raw=true)
+---
