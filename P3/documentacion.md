@@ -64,12 +64,28 @@ Los elementos de los que se compone el circuito son:
 - Arduino Uno R3
 - LED Rojo x1
 - Fotorresistencia x1
-- Resistencia 1 Kiloohmnios x2
+- Resistencia 1 Kiloohmnio x2
 
 #### Esquema del circuito
 
-![Esquema coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/sensor_LDR_esquema.png?raw=true)
+![Esquema sensor LDR](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/sensor_LDR_esquema.png?raw=true)
 
 #### Vídeo de demostración
 
-![Gif coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/sensor_LDR.gif?raw=true)
+![Gif sensor LDR](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/sensor_LDR.gif?raw=true)
+
+### Circuito: Visualizador de siete segmentos
+
+Por último, se ha diseñado un circuito con una pantalla de siete segmentos que muestra los dígitos 0-9.
+Los elementos de los que se compone el circuito son:
+- Arduino Uno R3
+- Cátodo Visualizador de 7 segmentos x1
+- Resistencia 1 Kiloohmnio x1
+
+#### Esquema del circuito
+
+![Esquema display siete segementos](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/seven_segment_display_esquema.png?raw=true)
+
+#### Vídeo de demostración
+
+![Gif display siete segementos]()
