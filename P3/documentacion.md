@@ -33,9 +33,26 @@ enciende el LED rojo, si se deja de pulsar el circuito funciona del mismo modo q
 
 #### Esquema del circuito
 
-![Esquema Semaforo](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/semaphore_with_button_esquema.png?raw=true)
+![Esquema Semaforo con botón](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/semaphore_with_button_esquema.png?raw=true)
 
 #### Vídeo de demostración
 
 
-![Gif Semaforo](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/semaphore_with_button.gif?raw=true)
+![Gif Semaforo con botón](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/semaphore_with_button.gif?raw=true)
+
+## Ejercicios Opcionales
+### Circuito: Simulación luces del coche fantástico.
+
+En este circuito se pretende simular el efecto de las luces del coche fantástico. El funcionamiento consiste en conectar cuatro
+LEDs rojos que se encienden y apagan de manera secuencial. Los elementos de los que se compone el circuito son:
+- Arduino Uno R3
+- LED Rojo x4
+- Resistencia 220 Ohmnios x4
+
+#### Esquema del circuito
+
+![Esquema coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/coche_fantástico_luces_esquema.png?raw=true)
+
+#### Vídeo de demostración
+
+![Gif coche fantástico]()
