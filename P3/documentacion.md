@@ -56,3 +56,20 @@ LEDs rojos que se encienden y apagan de manera secuencial. Los elementos de los 
 #### Vídeo de demostración
 
 ![Gif coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/coche_fantastico.gif?raw=true)
+
+### Circuito: Sensor LDR con LED
+
+El circuito consiste en un sensor LDR y un LED rojo. Si el umbral de luminosidad en menor a 300 lux el LED permanece apagado, en caso contrario se enciende.
+Los elementos de los que se compone el circuito son:
+- Arduino Uno R3
+- LED Rojo x1
+- Fotorresistencia x1
+- Resistencia 1 Kiloohmnios x2
+
+#### Esquema del circuito
+
+![Esquema coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/sensor_LDR_esquema.png?raw=true)
+
+#### Vídeo de demostración
+
+![Gif coche fantástico]()
