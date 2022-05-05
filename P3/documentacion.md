@@ -88,4 +88,4 @@ Los elementos de los que se compone el circuito son:
 
 #### Vídeo de demostración
 
-![Gif display siete segementos]()
+![Gif display siete segementos](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/seven_segments_display.gif?raw=true)
