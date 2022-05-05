@@ -10,6 +10,8 @@ en un intervalo de 1.5 segundos. Los componentes empleados para el diseño del c
 - LED Verde x1
 - Resistencia 220 Ohmnios x3
 
+El código asociado al circuito se puede encontrar [aquí](https://github.com/mnc99/PDIH/blob/9780886d10e5a9e7d83d8df59047502e97d26a09/P3/Codigo_Circuitos/semaphore.ino).
+
 #### Esquema del circuito
 
 ![Esquema Semaforo](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/semaphore_esquema.png?raw=true)
@@ -31,6 +33,8 @@ enciende el LED rojo, si se deja de pulsar el circuito funciona del mismo modo q
 - Resistencia 220 Ohmnios x3
 - Resistencia 10 Kiloohmnios x1
 
+El código asociado al circuito se puede encontrar [aquí](https://github.com/mnc99/PDIH/blob/9780886d10e5a9e7d83d8df59047502e97d26a09/P3/Codigo_Circuitos/semaphore_button.ino).
+
 #### Esquema del circuito
 
 ![Esquema Semaforo con botón](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/semaphore_with_button_esquema.png?raw=true)
@@ -49,6 +53,8 @@ LEDs rojos que se encienden y apagan de manera secuencial. Los elementos de los 
 - LED Rojo x4
 - Resistencia 220 Ohmnios x4
 
+El código asociado al circuito se puede encontrar [aquí](https://github.com/mnc99/PDIH/blob/9780886d10e5a9e7d83d8df59047502e97d26a09/P3/Codigo_Circuitos/coche_fantastico.ino).
+
 #### Esquema del circuito
 
 ![Esquema coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/coche_fantástico_luces_esquema.png?raw=true)
@@ -66,6 +72,8 @@ Los elementos de los que se compone el circuito son:
 - Fotorresistencia x1
 - Resistencia 1 Kiloohmnio x2
 
+El código asociado al circuito se puede encontrar [aquí](https://github.com/mnc99/PDIH/blob/9780886d10e5a9e7d83d8df59047502e97d26a09/P3/Codigo_Circuitos/sensor_LDR.ino).
+
 #### Esquema del circuito
 
 ![Esquema sensor LDR](https://github.com/mnc99/PDIH/blob/main/P3/Screenshots/sensor_LDR_esquema.png?raw=true)
@@ -81,6 +89,8 @@ Los elementos de los que se compone el circuito son:
 - Arduino Uno R3
 - Cátodo Visualizador de 7 segmentos x1
 - Resistencia 1 Kiloohmnio x1
+
+El código asociado al circuito se puede encontrar [aquí](https://github.com/mnc99/PDIH/blob/9780886d10e5a9e7d83d8df59047502e97d26a09/P3/Codigo_Circuitos/seven_segment_display.ino).
 
 #### Esquema del circuito
 
