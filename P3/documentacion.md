@@ -72,4 +72,4 @@ Los elementos de los que se compone el circuito son:
 
 #### Vídeo de demostración
 
-![Gif coche fantástico]()
+![Gif coche fantástico](https://github.com/mnc99/PDIH/blob/main/P3/Videos_Fotos_Circuitos/sensor_LDR.gif?raw=true)
