@@ -1,0 +1,162 @@
+%!
+% Tarjeta de presentación
+
+%Necesario para dibujar la estrella
+%%BeginProlog
+/u 36 def % unit: 0.5 inch
+/n 5 def % choose an odd number
+/da 720 n div def % angle increment
+/a0 90 def % initial angle
+%%EndProlog
+
+% Formato apaisado
+<< /PageSize [842 595] >> setpagedevice
+
+%Recuadro principal
+
+newpath
+1 0.17 0.17 setrgbcolor
+0 10 moveto
+900 0 rlineto
+20 setlinewidth
+stroke
+
+newpath
+1 0.17 0.17 setrgbcolor
+0 585 moveto
+900 0 rlineto
+20 setlinewidth
+stroke
+
+newpath
+0 0.33 1 setrgbcolor
+10 20 moveto
+0 555 rlineto
+20 setlinewidth
+stroke
+
+newpath
+0 0.33 1 setrgbcolor
+835 20 moveto
+0 555 rlineto
+20 setlinewidth
+stroke
+
+% Escudo
+newpath
+1 0.17 0.17 setrgbcolor
+0.1 setlinewidth
+% x  y   R  angI angF
+ 250 300  150   0   360   arc
+closepath
+fill
+stroke
+
+newpath
+1 1 1 setrgbcolor
+0.1 setlinewidth
+% x  y   R  angI angF
+ 250 300  130   0   360   arc
+closepath
+fill
+stroke
+
+newpath
+1 0.17 0.17 setrgbcolor
+0.1 setlinewidth
+% x  y   R  angI angF
+ 250 300  110   0   360   arc
+closepath
+fill
+stroke
+
+newpath
+0 0.33 1 setrgbcolor
+0.1 setlinewidth
+% x  y   R  angI angF
+ 250 300  80   0   360   arc
+closepath
+fill
+stroke
+
+% Información personal
+
+/Courier-Bold findfont	
+25 scalefont			
+setfont					
+
+% Nombre
+newpath
+0 0 0 setrgbcolor				
+485 420 moveto			 
+(Nombre: Steve Rogers) show
+stroke
+
+/Courier findfont	
+25 scalefont			
+setfont	
+
+% Alias
+newpath
+0 0 0 setrgbcolor				
+485 390 moveto			 
+(Alias: Capitan America) show
+stroke
+
+% Nacimiento
+newpath
+0 0 0 setrgbcolor
+485 360 moveto
+(Nacimiento: 04/07/1918) show
+stroke
+
+% Ocupación
+newpath
+0 0 0 setrgbcolor				
+485 320 moveto			 
+(Ocupacion: Vengador) show
+stroke
+
+% Residencia
+newpath
+0 0 0 setrgbcolor				
+485 290 moveto			 
+(Residencia: Torre) show
+stroke
+
+% Residencia
+newpath
+0 0 0 setrgbcolor				
+485 260 moveto			 
+(Stark, Midtown) show
+stroke
+
+% Residencia
+newpath
+0 0 0 setrgbcolor				
+485 230 moveto			 
+(Manhattan. Ciudad de) show
+stroke
+
+% Residencia
+newpath
+0 0 0 setrgbcolor				
+485 200 moveto			 
+(Nueva York) show
+stroke
+
+% Estrella
+u dup scale 1 u div setlinewidth
+6.95 8.25 translate
+newpath
+1 1 1 setrgbcolor
+a0 cos a0 sin moveto /a a0 def
+n {a 720 a0 add gt {exit} if % test
+/a a da add def % increase angle
+a cos a sin lineto % draw line
+} loop
+closepath
+fill
+stroke
+
+showpage

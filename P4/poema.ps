@@ -1,0 +1,98 @@
+%!
+
+% Poema en PostScript
+
+% Formato apaisado
+<< /PageSize [842 595] >> setpagedevice
+
+% Círculo izq. (Corazón)
+newpath
+1 0.17 0.17 setrgbcolor
+% x  y   R  angI angF
+ 150 400  80   0   360   arc
+closepath
+fill
+stroke
+
+% Círculo dcha. (Corazón)
+newpath
+1 0.17 0.17 setrgbcolor
+% x  y   R  angI angF
+ 300 400  80   0   360   arc
+closepath
+fill
+stroke
+
+% Cuadrado (Corazón)
+/Sq {
+1 0.17 0.17 setrgbcolor
+0 0 moveto
+145 0 rlineto
+0 145 rlineto
+-145 0 rlineto
+closepath
+fill
+} def
+
+gsave
+225 293 translate
+45 rotate
+-50 -50 translate
+Sq stroke
+grestore
+
+% Poema
+
+/Times-Italic findfont	
+20 scalefont			
+setfont	
+
+newpath
+0.8 setgray
+500 405 moveto
+(Podra nublarse el sol eternamente;) show
+stroke
+
+newpath
+0.8 setgray
+500 380 moveto
+(Podra secarse en un instante el mar;) show
+stroke
+
+newpath
+0.6 setgray
+500 355 moveto
+(Podra romperse el eje de la tierra) show
+stroke
+
+newpath
+0.6 setgray
+500 330 moveto
+(Como un debil cristal.) show
+stroke
+
+newpath
+0.4 setgray
+500 305 moveto
+(¡Todo sucedera! Podra la muerte) show
+stroke
+
+newpath
+0.4 setgray
+500 280 moveto
+(Cubrirme con su funebre crespon;) show
+stroke
+
+newpath
+0.2 setgray
+500 255 moveto
+(Pero jamas en mi podra apagarse) show
+stroke
+
+newpath
+0.2 setgray
+500 230 moveto
+(La llama de tu amor.) show
+stroke
+
+showpage
