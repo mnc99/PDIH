@@ -1,5 +1,5 @@
 # Práctica 4: El lenguaje PostScript
-## Ejercicios Obligatorios.
+## Ejercicios.
 ### Ejercicio 1: Dibujo de una casa.
 
 El primer ejercicio consiste en realizar un dibujo sencillo de una casa usando los comandos
@@ -24,5 +24,5 @@ y un poema de Gustavo Adolfo Bécquer.
 ![Poema](https://github.com/mnc99/PDIH/blob/main/P4/poema.png?raw=true)
 ---
 
-Nota: No he podido añadir acentos a los textos ya que PostScript no me los reconocía. He estado investigando
+*Nota*: No he podido añadir acentos a los textos ya que PostScript no me los reconocía. He estado investigando
 en Internet cómo solucionarlo pero no he podido.
