@@ -16,3 +16,22 @@ nombre
 apellidos <- readWave('apellidos.wav')
 apellidos
 ```
+---
+
+### Ejercicio 2: Dibujar la forma de onda de ambos sonidos.
+
+El código para dibujar la onda de los sonidos es el siguiente:
+
+```
+# Mostrar la forma de onda de ambos archivos
+plot(extractWave(nombre, from = 1, to = 45004))
+plot(extractWave(apellidos, from = 1, to = 68514))
+```
+
+La forma de onda del sonido asociado al nombre es:
+
+![Onda Nombre](https://github.com/mnc99/PDIH/blob/main/P5/onda-nombre.png?raw=true)
+
+La forma de onda del sonido asociado a los apellidos es:
+
+![Onda Apellidos](https://github.com/mnc99/PDIH/blob/main/P5/onda-apellidos.png?raw=true)
