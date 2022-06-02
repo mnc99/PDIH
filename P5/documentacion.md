@@ -69,3 +69,31 @@ Formal class 'Wave' [package "tuneR"] with 6 slots
 ```
 
 ---
+
+### Ejercicio 4: Unir ambos sonidos en uno nuevo.
+
+Para unir ambos sonidos y generar uno nuevo basta con usar la función pastew:
+
+```
+# Unir ambos archivos en uno nuevo
+nombre_completo <- pastew(apellidos, nombre, output = "Wave")
+nombre_completo
+listen(nombre_completo)
+```
+
+---
+
+### Ejercicio 5: Dibujar la forma de onda de la señal resultante.
+
+Para dibujar la forma de onda resultante de unir ambos sonidos se usa la función plot
+usada anteriormente:
+
+```
+# Mostrar la forma de onda del nuevo sonido
+plot(extractWave(nombre_completo, from = 1, to = 113518))
+```
+La forma de onda obtenida es:
+
+![Onda Nombre y Apellidos](https://github.com/mnc99/PDIH/blob/main/P5/onda-nombre-completo.png?raw=true)
+
+---
