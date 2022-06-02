@@ -97,3 +97,69 @@ La forma de onda obtenida es:
 ![Onda Nombre y Apellidos](https://github.com/mnc99/PDIH/blob/main/P5/onda-nombre-completo.png?raw=true)
 
 ---
+
+### Ejercicio 6: Pasar un filtro de frecuencia para eliminar las frecuencias entre 10000Hz y 20000Hz
+
+Para pasar un filtro de frecuencia al sonido que une el nombre y los apellidos se usa la función bwfilter:
+
+```
+f <- nombre_completo@samp.rate #44100
+f
+nombre_completo_mezcla <- bwfilter(nombre_completo, f = f, channel = 1, n = 1,
+                                   from = 10000, to = 20000, bandpass = TRUE,
+                                   listen = FALSE, output = "Wave")
+nombre_completo_mezcla
+listen(nombre_completo_mezcla)
+plot(extractWave(nombre_completo_mezcla, from = 1, to = 113518))
+```
+
+La forma de onda de la señal con las frecuencias entre 10000Hz-20000Hz eliminadas es:
+
+![Onda Filtro Frecuencia](https://github.com/mnc99/PDIH/blob/main/P5/onda-nombre-completo-filtro.png?raw=true)
+
+---
+
+### Ejercicio 7: Almacenar la señal obtenida como un fichero WAV denominado “mezcla.wav”.
+
+Para almacenar la señal obtenida en un fichero WAV llamado "mezcla.wav" se usa la función writeWave:
+
+```
+writeWave(nombre_completo_mezcla, file.path("mezcla.wav"))
+```
+
+---
+
+### Ejercicio 8: Cargar un nuevo archivo de sonido, aplicarle eco y a continuación darle la vuelta al sonido. Almacenar la señal obtenida como un fichero WAV denominado “alreves.wav”.
+
+El nuevo archivo de sonido se denomina "fuerza.wav" y contiene la frase: "Que la Fuerza de acompañe" característica de las películas de Star Wars.
+Para generar el archivo se ha empleado el mismo comando que en el ejercicio 1:
+- say -o fuerza.wav --data-format=LEF32@44100 "Que la Fuerza te acompañe"
+
+Todos los pasos necesarios para realizar el ejercicio se muestran en el código siguiente:
+
+```
+# Cargar un nuevo archivo wave
+fuerza <- readWave('fuerza.wav')
+fuerza
+
+# Aplicar eco al sonido
+fuerzaEco <- echo(fuerza, f = 22050, amp = c(0.8,0.4,0.2),delay = c(1,2,3),
+                  output = "Wave")
+fuerzaEco@left = 10000 * fuerzaEco@left
+listen(fuerzaEco)
+
+# Darle la vuelta al sonido
+fuerzaEcoAlReves <- revw(fuerzaEco, output = "Wave")
+fuerzaEcoAlReves
+plot(extractWave(fuerzaEcoAlReves, from = 1, to = 153946))
+listen(fuerzaEcoAlReves)
+
+#Almacenar el nuevo sonido generado
+writeWave(fuerzaEcoAlReves, file.path("alreves.wav"))
+```
+
+La forma de onda de la señal es la siguente:
+
+![Onda Al Reves](https://github.com/mnc99/PDIH/blob/main/P5/onda-al-reves.png?raw=true)
+
+---
