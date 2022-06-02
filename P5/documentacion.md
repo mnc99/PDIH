@@ -35,3 +35,37 @@ La forma de onda del sonido asociado al nombre es:
 La forma de onda del sonido asociado a los apellidos es:
 
 ![Onda Apellidos](https://github.com/mnc99/PDIH/blob/main/P5/onda-apellidos.png?raw=true)
+---
+
+### Ejercicio 3: Obtener la información de las cabeceras de ambos sonidos.
+
+Para obtener la información de las cabeceras asociadas a los archivos de audio de los
+sonidos se emplea el siguiente código que hace uso de la función str():
+
+```
+# Mostrar información de las cabeceras
+str(nombre)
+str(apellidos)
+```
+La información obtenida es la siguiente:
+
+```
+> str(nombre)
+Formal class 'Wave' [package "tuneR"] with 6 slots
+  ..@ left     : num [1:45004] 0 0 0 0 0 0 0 0 0 0 ...
+  ..@ right    : num(0) 
+  ..@ stereo   : logi FALSE
+  ..@ samp.rate: int 44100
+  ..@ bit      : int 32
+  ..@ pcm      : logi FALSE
+> str(apellidos)
+Formal class 'Wave' [package "tuneR"] with 6 slots
+  ..@ left     : num [1:68514] 0 0 0 0 0 0 0 0 0 0 ...
+  ..@ right    : num(0) 
+  ..@ stereo   : logi FALSE
+  ..@ samp.rate: int 44100
+  ..@ bit      : int 32
+  ..@ pcm      : logi FALSE
+```
+
+---
